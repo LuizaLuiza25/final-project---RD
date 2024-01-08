@@ -1,0 +1,72 @@
+/*Mobile-first code: */
+
+.grid {
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: space-evenly;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  
+  .grid img {
+    width: 100%;
+  }
+  
+  
+    @media screen and (min-width: 772px) {
+      
+     
+        
+        
+        .grid{
+        grid-template-columns: 45% 45%;
+        align-items: center;
+      }
+      .grid img { 
+        border-radius: 100%;
+      }
+        .grid figure:nth-last-child(1) {
+          grid-column: 1 / span 2;
+          }
+    }
+  
+  
+  
+    @media screen and (min-width:992px) {
+    
+
+        .grid figure:nth-child(3n) {
+          grid-column: 1 / span 2;
+          
+        }
+      
+  .grid img {
+    border-radius: 0%;
+  }
+  
+    }
+  
+  
+    /* preferes-reduced motion media query: */
+  
+    @media screen and (prefers-reduced-motion: reduce) {
+    body {
+      scroll-behavior: smooth;
+    
+    }
+  
+    }
+  
+    /*create a media query for dark colors: change background to a dark color, change font color to a lighter color, change the border of the figures to black*/
+  
+    @media (prefers-color-scheme: dark) {
+  
+      .grid {
+  
+        background-color: #00008b;
+        color: #ffffe0;
+        border-color: #000000;
+      }
+    }
+  
+   
